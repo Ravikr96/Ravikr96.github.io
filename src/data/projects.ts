@@ -1,0 +1,171 @@
+export type ProjectCategory =
+  | "all"
+  | "genai"
+  | "data"
+  | "ml"
+  | "platform";
+
+export type Project = {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  impact: string[];
+  tech: string[];
+  category: ProjectCategory;
+  image: string;
+  github?: string;
+  featured?: boolean;
+};
+
+export const projectCategories: { id: ProjectCategory; label: string }[] = [
+  { id: "all", label: "All" },
+  { id: "genai", label: "GenAI" },
+  { id: "platform", label: "Platform" },
+  { id: "data", label: "Data" },
+  { id: "ml", label: "ML / CV" },
+];
+
+export const projects: Project[] = [
+  {
+    id: "agentic-rag",
+    title: "Enterprise Agentic RAG Assistant",
+    subtitle: "Knowledge platform · ConcertAI",
+    description:
+      "Production knowledge assistant integrating Confluence, GitHub, and internal documentation with hybrid retrieval, conversational memory, and tool-calling agents for context-aware enterprise reasoning.",
+    impact: [
+      "50% reduction in team onboarding time",
+      "Unified search across fragmented knowledge bases",
+      "Autonomous workflow assistance for engineers",
+    ],
+    tech: ["LangChain", "LangGraph", "FAISS", "Pinecone", "FastAPI", "AWS"],
+    category: "genai",
+    image: "/images/portfolio/portfolio-2.jpg",
+    featured: true,
+  },
+  {
+    id: "ai-observability",
+    title: "AI Observability & Self-Healing Platform",
+    subtitle: "Pipeline intelligence · Enterprise",
+    description:
+      "RAG-powered observability layer for AWS Glue and Databricks pipelines using Bedrock, Lambda, and Spark metadata analysis to automate anomaly detection, root cause analysis, and remediation.",
+    impact: [
+      "Automated RCA for data pipeline incidents",
+      "Reduced mean-time-to-resolution",
+      "Proactive anomaly detection at scale",
+    ],
+    tech: ["Amazon Bedrock", "Lambda", "CloudWatch", "RAG", "Spark"],
+    category: "platform",
+    image: "/images/portfolio/portfolio-6.jpg",
+    featured: true,
+  },
+  {
+    id: "incident-agents",
+    title: "Agentic Incident Management",
+    subtitle: "Ops automation · Enterprise",
+    description:
+      "LLM-driven incident workflows with Jira and Slack integrations for classification, severity prioritization, intelligent routing, and automated RCA generation.",
+    impact: [
+      "Faster incident triage and routing",
+      "Consistent RCA documentation",
+      "Reduced operational toil",
+    ],
+    tech: ["LangGraph", "LangChain", "Jira API", "Slack", "LLMs"],
+    category: "genai",
+    image: "/images/portfolio/portfolio-7.jpg",
+    featured: true,
+  },
+  {
+    id: "mcp-orchestration",
+    title: "MCP Tool Orchestration Framework",
+    subtitle: "Agent infrastructure",
+    description:
+      "Model Context Protocol integrations enabling AI agents to securely invoke enterprise APIs, databases, and applications with dynamic tool selection and context-aware execution.",
+    impact: [
+      "Secure agent-to-system connectivity",
+      "Reusable tool frameworks across workflows",
+      "Foundation for autonomous enterprise agents",
+    ],
+    tech: ["MCP", "Python", "FastAPI", "LangChain", "AWS"],
+    category: "platform",
+    image: "/images/portfolio/portfolio-5.jpg",
+  },
+  {
+    id: "lakehouse-migration",
+    title: "Lakehouse Platform Migration",
+    subtitle: "Data platform · Healthcare",
+    description:
+      "End-to-end migration from legacy Glue and Snowflake to Databricks with Medallion architecture, Delta Lake, and Unity Catalog for governed, scalable analytics.",
+    impact: [
+      "Centralized data governance",
+      "Scalable batch & streaming processing",
+      "Modern analytics foundation",
+    ],
+    tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "Airflow"],
+    category: "data",
+    image: "/images/portfolio/portfolio-3.jpg",
+  },
+  {
+    id: "face-attendance",
+    title: "Vision-Based Attendance System",
+    subtitle: "Computer vision · Academic",
+    description:
+      "Face recognition pipeline for automated attendance tracking with real-time detection, embedding matching, and admin dashboard integration.",
+    impact: [
+      "Automated attendance capture",
+      "Reduced manual record-keeping",
+      "Scalable vision pipeline",
+    ],
+    tech: ["OpenCV", "Python", "Deep Learning", "FastAPI"],
+    category: "ml",
+    image: "/images/portfolio/portfolio-1.jpg",
+    github: "https://github.com/Ravikr96",
+  },
+  {
+    id: "resume-parser",
+    title: "Intelligent Resume Parser",
+    subtitle: "NLP · Document AI",
+    description:
+      "NLP pipeline extracting structured candidate data from resumes — skills, experience, education — for recruitment automation and search.",
+    impact: [
+      "Structured data from unstructured PDFs",
+      "Faster candidate screening",
+      "Searchable talent database",
+    ],
+    tech: ["Python", "NLP", "spaCy", "ML"],
+    category: "ml",
+    image: "/images/portfolio/portfolio-2.jpg",
+    github: "https://github.com/Ravikr96",
+  },
+  {
+    id: "anpr",
+    title: "Automatic Number Plate Recognition",
+    subtitle: "Computer vision",
+    description:
+      "End-to-end ANPR system detecting, segmenting, and recognizing license plates from video streams with OCR post-processing.",
+    impact: [
+      "Real-time plate detection",
+      "High-accuracy OCR pipeline",
+      "Edge-deployable architecture",
+    ],
+    tech: ["OpenCV", "YOLO", "OCR", "Python"],
+    category: "ml",
+    image: "/images/portfolio/portfolio-3.jpg",
+    github: "https://github.com/Ravikr96",
+  },
+  {
+    id: "sentiment-chatbot",
+    title: "Conversational AI & Sentiment Platform",
+    subtitle: "LinkCXO · Product",
+    description:
+      "Rasa-powered chatbot with aspect-based sentiment analysis and recommendation engine for personalized content and user engagement.",
+    impact: [
+      "Improved self-service support",
+      "Actionable sentiment insights",
+      "Higher user engagement",
+    ],
+    tech: ["Rasa", "Python", "spaCy", "Scikit-learn", "AWS"],
+    category: "genai",
+    image: "/images/portfolio/portfolio-5.jpg",
+  },
+];
