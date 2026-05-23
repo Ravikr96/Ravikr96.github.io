@@ -7,6 +7,7 @@ type MagneticButtonProps = {
   children: ReactNode;
   className?: string;
   href?: string;
+  external?: boolean;
   onClick?: () => void;
   variant?: "primary" | "secondary" | "ghost";
   type?: "button" | "submit";
@@ -18,6 +19,7 @@ export function MagneticButton({
   children,
   className,
   href,
+  external,
   onClick,
   variant = "primary",
   type = "button",
@@ -75,7 +77,14 @@ export function MagneticButton({
         onMouseMove={handleMove}
         onMouseLeave={handleLeave}
       >
-        <a href={href} aria-label={ariaLabel} className="block">
+        <a
+          href={href}
+          aria-label={ariaLabel}
+          className="block"
+          {...(external
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+        >
           {inner}
         </a>
       </div>

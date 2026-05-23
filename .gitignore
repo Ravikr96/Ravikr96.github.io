@@ -9,4 +9,3 @@ coverage
 *.log
 .vscode/*
 !.vscode/extensions.json
-legacy

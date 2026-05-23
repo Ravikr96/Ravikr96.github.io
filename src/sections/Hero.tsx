@@ -107,7 +107,11 @@ export function Hero() {
                 Start a conversation
                 <ArrowRight className="h-4 w-4" />
               </MagneticButton>
-              <MagneticButton variant="secondary" href={site.resumeUrl}>
+              <MagneticButton
+                variant="secondary"
+                href={site.resumeUrl}
+                external
+              >
                 View resume
               </MagneticButton>
             </motion.div>

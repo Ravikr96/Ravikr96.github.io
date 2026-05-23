@@ -1,0 +1,16 @@
+{
+  "name": "Ravi Kumar — Portfolio",
+  "short_name": "Ravi Kumar",
+  "description": "Senior Data & AI Engineer — GenAI, Agentic AI, and cloud-native data platforms.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050508",
+  "theme_color": "#050508",
+  "icons": [
+    {
+      "src": "/profile.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
