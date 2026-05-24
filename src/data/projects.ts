@@ -14,6 +14,7 @@ export type Project = {
   tech: string[];
   category: ProjectCategory;
   image: string;
+  imageAlt: string;
   github?: string;
   featured?: boolean;
 };
@@ -40,7 +41,9 @@ export const projects: Project[] = [
     ],
     tech: ["LangChain", "LangGraph", "FAISS", "Pinecone", "FastAPI", "AWS"],
     category: "genai",
-    image: "/images/portfolio/portfolio-2.jpg",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "Neural network visualization representing AI and RAG systems",
     featured: true,
   },
   {
@@ -56,7 +59,9 @@ export const projects: Project[] = [
     ],
     tech: ["Amazon Bedrock", "Lambda", "CloudWatch", "RAG", "Spark"],
     category: "platform",
-    image: "/images/portfolio/portfolio-6.jpg",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "Analytics dashboard with charts for pipeline observability",
     featured: true,
   },
   {
@@ -72,7 +77,9 @@ export const projects: Project[] = [
     ],
     tech: ["LangGraph", "LangChain", "Jira API", "Slack", "LLMs"],
     category: "genai",
-    image: "/images/portfolio/portfolio-7.jpg",
+    image:
+      "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "Security operations center monitoring incident alerts",
     featured: true,
   },
   {
@@ -88,7 +95,9 @@ export const projects: Project[] = [
     ],
     tech: ["MCP", "Python", "FastAPI", "LangChain", "AWS"],
     category: "platform",
-    image: "/images/portfolio/portfolio-5.jpg",
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "Server infrastructure representing API tool orchestration",
   },
   {
     id: "lakehouse-migration",
@@ -103,7 +112,9 @@ export const projects: Project[] = [
     ],
     tech: ["Databricks", "Delta Lake", "PySpark", "Unity Catalog", "Airflow"],
     category: "data",
-    image: "/images/portfolio/portfolio-3.jpg",
+    image:
+      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "Cloud network diagram representing data lakehouse architecture",
   },
   {
     id: "face-attendance",
@@ -118,7 +129,9 @@ export const projects: Project[] = [
     ],
     tech: ["OpenCV", "Python", "Deep Learning", "FastAPI"],
     category: "ml",
-    image: "/images/portfolio/portfolio-1.jpg",
+    image:
+      "https://images.unsplash.com/photo-1526628953301-3e589a6a5414?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "Facial recognition interface on a digital screen",
     github: "https://github.com/Ravikr96",
   },
   {
@@ -134,7 +147,9 @@ export const projects: Project[] = [
     ],
     tech: ["Python", "NLP", "spaCy", "ML"],
     category: "ml",
-    image: "/images/portfolio/portfolio-2.jpg",
+    image:
+      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "Resume documents and paperwork for document AI parsing",
     github: "https://github.com/Ravikr96",
   },
   {
@@ -150,7 +165,9 @@ export const projects: Project[] = [
     ],
     tech: ["OpenCV", "YOLO", "OCR", "Python"],
     category: "ml",
-    image: "/images/portfolio/portfolio-3.jpg",
+    image:
+      "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "Vehicle on a road for license plate recognition",
     github: "https://github.com/Ravikr96",
   },
   {
@@ -166,6 +183,8 @@ export const projects: Project[] = [
     ],
     tech: ["Rasa", "Python", "spaCy", "Scikit-learn", "AWS"],
     category: "genai",
-    image: "/images/portfolio/portfolio-5.jpg",
+    image:
+      "https://images.unsplash.com/photo-1535378647046-10aedf7de28f?w=1200&h=675&fit=crop&q=80",
+    imageAlt: "AI chatbot interface on a laptop screen",
   },
 ];

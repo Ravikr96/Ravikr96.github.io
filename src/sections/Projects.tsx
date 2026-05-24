@@ -12,6 +12,10 @@ import { cn } from "@/lib/cn";
 
 function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false);
+  const [imgError, setImgError] = useState(false);
+
+  const fallbackImage =
+    "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=675&fit=crop&q=80";
 
   return (
     <motion.article
@@ -26,9 +30,12 @@ function ProjectCard({ project }: { project: Project }) {
     >
       <div className="relative aspect-[16/9] overflow-hidden">
         <img
-          src={project.image}
-          alt=""
+          src={imgError ? fallbackImage : project.image}
+          alt={project.imageAlt}
           loading="lazy"
+          decoding="async"
+          referrerPolicy="no-referrer"
+          onError={() => setImgError(true)}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/40 to-transparent" />
